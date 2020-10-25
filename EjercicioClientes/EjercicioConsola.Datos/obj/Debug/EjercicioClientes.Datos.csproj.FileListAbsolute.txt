@@ -1,0 +1,11 @@
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\EjercicioConsola.Datos.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\EjercicioConsola.Datos.pdb
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\EjercicioClientes.Entidades.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\EjercicioClientes.Entidades.pdb
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioClientes.Datos.csprojAssemblyReference.cache
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioClientes.Datos.csproj.CoreCompileInputs.cache
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioClientes.Datos.csproj.CopyComplete
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioConsola.Datos.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioConsola.Datos.pdb
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\Newtonsoft.Json.xml
