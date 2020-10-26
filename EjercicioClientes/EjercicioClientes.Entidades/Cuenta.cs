@@ -41,5 +41,17 @@ namespace EjercicioClientes.Entidades
             return string.Format("ID: {0} - ID_CLIENTE: {1} - NRO_CUENTA: {2} - DESCRIPCION: {3} - SALDO: ${4} - FECHA_APERTURA {5}", this._id, this._idCliente, this._nrocuenta, this._descripcion, this._saldo, this._fechaApertura);
         }
 
+        public Cuenta(int nrocuenta, float saldo, string descripcion, string FechaApertura, bool activo, int IdCliente, int id)
+        {
+            this._nrocuenta = nrocuenta;
+            this._saldo = saldo;
+            this._descripcion = descripcion;
+            this._fechaApertura = Convert.ToDateTime(FechaApertura);
+            this._fechaModificacion = DateTime.Now;
+            this._activo = activo;
+            this._idCliente = IdCliente;
+            this._id = id;
+        }
+
     }
 }
