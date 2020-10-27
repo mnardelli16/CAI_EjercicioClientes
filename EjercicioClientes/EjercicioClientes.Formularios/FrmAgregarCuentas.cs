@@ -67,14 +67,14 @@ namespace EjercicioClientes.Formularios
 
                 Cuenta C = new Cuenta(1,0,_descpricion, _fechaApertura, _activo, _idCliente, TraerProximoID());
 
-                int id =_cuentaServicio.InsertarCuenta(C);
+                _cuentaServicio.InsertarCuenta(C);
 
                 MessageBox.Show("Se agrego la cuenta al cliente " + C.IdCliente + " exitosamente","Mensaje del sistema");
 
-                //Cuenta Aux = _cuentaServicio.ListarCuentaPorID(id);
+                Cuenta Aux = _cuentaServicio.ListarCuentaPorID(C.IdCliente);
 
-                //txtNroCuenta.Text = Aux.NroCuenta.ToString();
-                //txtSaldo.Text = Aux.Saldo.ToString();
+                txtNroCuenta.Text = Aux.NroCuenta.ToString();
+                txtSaldo.Text = Aux.Saldo.ToString();
                 
 
 
@@ -114,6 +114,19 @@ namespace EjercicioClientes.Formularios
             }
             return contador + 1;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            cbxCliente.SelectedIndex = -1;
+            cbxDescripcion.SelectedIndex = -1;
+            txtNroCuenta.Clear();
+            txtSaldo.Clear();
         }
     }
 }

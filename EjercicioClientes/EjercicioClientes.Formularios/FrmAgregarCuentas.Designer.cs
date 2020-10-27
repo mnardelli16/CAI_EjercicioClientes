@@ -30,19 +30,20 @@
         {
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.txtNroCuenta = new System.Windows.Forms.TextBox();
+            this.cbxDescripcion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.checkActivo = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkActivo = new System.Windows.Forms.CheckBox();
-            this.cbxDescripcion = new System.Windows.Forms.ComboBox();
-            this.txtNroCuenta = new System.Windows.Forms.TextBox();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,23 +79,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Cuenta";
             // 
-            // label1
+            // btnAgregar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 287);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Numero de Cuenta";
+            this.btnAgregar.Location = new System.Drawing.Point(138, 188);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(97, 24);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label2
+            // txtSaldo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Descripción";
+            this.txtSaldo.Location = new System.Drawing.Point(134, 326);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldo.TabIndex = 11;
+            // 
+            // txtNroCuenta
+            // 
+            this.txtNroCuenta.Location = new System.Drawing.Point(134, 287);
+            this.txtNroCuenta.Name = "txtNroCuenta";
+            this.txtNroCuenta.Size = new System.Drawing.Size(100, 20);
+            this.txtNroCuenta.TabIndex = 10;
+            // 
+            // cbxDescripcion
+            // 
+            this.cbxDescripcion.FormattingEnabled = true;
+            this.cbxDescripcion.Location = new System.Drawing.Point(114, 76);
+            this.cbxDescripcion.Name = "cbxDescripcion";
+            this.cbxDescripcion.Size = new System.Drawing.Size(121, 21);
+            this.cbxDescripcion.TabIndex = 9;
             // 
             // label3
             // 
@@ -105,32 +120,23 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Saldo";
             // 
-            // label4
+            // checkActivo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Cliente";
+            this.checkActivo.AutoSize = true;
+            this.checkActivo.Location = new System.Drawing.Point(167, 149);
+            this.checkActivo.Name = "checkActivo";
+            this.checkActivo.Size = new System.Drawing.Size(15, 14);
+            this.checkActivo.TabIndex = 2;
+            this.checkActivo.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Fecha Apertura";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Activo";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Numero de Cuenta";
             // 
             // cbxCliente
             // 
@@ -148,52 +154,58 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // checkActivo
+            // label7
             // 
-            this.checkActivo.AutoSize = true;
-            this.checkActivo.Location = new System.Drawing.Point(167, 149);
-            this.checkActivo.Name = "checkActivo";
-            this.checkActivo.Size = new System.Drawing.Size(15, 14);
-            this.checkActivo.TabIndex = 2;
-            this.checkActivo.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Activo";
             // 
-            // cbxDescripcion
+            // label5
             // 
-            this.cbxDescripcion.FormattingEnabled = true;
-            this.cbxDescripcion.Location = new System.Drawing.Point(114, 76);
-            this.cbxDescripcion.Name = "cbxDescripcion";
-            this.cbxDescripcion.Size = new System.Drawing.Size(121, 21);
-            this.cbxDescripcion.TabIndex = 9;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Fecha Apertura";
             // 
-            // txtNroCuenta
+            // label4
             // 
-            this.txtNroCuenta.Location = new System.Drawing.Point(134, 287);
-            this.txtNroCuenta.Name = "txtNroCuenta";
-            this.txtNroCuenta.Size = new System.Drawing.Size(100, 20);
-            this.txtNroCuenta.TabIndex = 10;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Cliente";
             // 
-            // txtSaldo
+            // label2
             // 
-            this.txtSaldo.Location = new System.Drawing.Point(134, 326);
-            this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(100, 20);
-            this.txtSaldo.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Descripción";
             // 
-            // btnAgregar
+            // button1
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(138, 188);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(97, 24);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.button1.Location = new System.Drawing.Point(365, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 34);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Limpiar Campos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAgregarCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
             this.Name = "FrmAgregarCuentas";
@@ -221,5 +233,6 @@
         private System.Windows.Forms.ComboBox cbxCliente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
