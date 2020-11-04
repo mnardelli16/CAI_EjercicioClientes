@@ -51,7 +51,7 @@ namespace EjercicioConsola.Datos
             n.Add("FechaNacimiento", C.FechaNacimiento.ToShortDateString());
             n.Add("FechaAlta", C.FechaAlta.ToShortDateString());
             n.Add("Activo", C.Activo.ToString());
-            n.Add("Usuario", "MAXI");
+            n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
 
             return n;
         }

@@ -89,5 +89,10 @@ namespace EjercicioClientes.Formularios
             txtTelefono.Clear();
             checkActivo.Checked = false;
         }
+
+        private void FrmAgregar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

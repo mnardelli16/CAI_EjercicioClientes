@@ -24,8 +24,11 @@ namespace EjercicioClientes.Formularios
             _clienteServicio = new ClienteServicio();
             AgregarClientesCombo();
             AgregarComboDescricion();
+            AgregarCuentasCombo();
             
         }
+
+
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -75,8 +78,8 @@ namespace EjercicioClientes.Formularios
 
                 txtNroCuenta.Text = Aux.NroCuenta.ToString();
                 txtSaldo.Text = Aux.Saldo.ToString();
-                
 
+                AgregarCuentasCombo();
 
             }
             catch(Exception es)
@@ -98,6 +101,16 @@ namespace EjercicioClientes.Formularios
             foreach(Cliente C in lst)
             {
                 cbxCliente.Items.Add(C.Id + " - " + C.Nombre + " - " + C.Apellido);
+            }
+        }
+
+        private void AgregarCuentasCombo()
+        {
+            List<Cuenta> lst = _cuentaServicio.ListarTodas();
+
+            foreach(Cuenta C in lst)
+            {
+                cbxCuenta.Items.Add(C.IdCliente + " - " + C.NroCuenta);
             }
         }
 
@@ -127,6 +140,43 @@ namespace EjercicioClientes.Formularios
             cbxDescripcion.SelectedIndex = -1;
             txtNroCuenta.Clear();
             txtSaldo.Clear();
+        }
+
+        private void btnAgregarSaldo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string STRsaldo = txtSaldoAgregar.Text;
+                float _saldo = 0;
+
+                string msj = Validaciones.ValidarSaldo(STRsaldo, "Saldo", ref _saldo);
+
+                if(cbxCuenta.SelectedIndex == -1)
+                {
+                    throw new Exception("Debe seleccionar una cuenta");
+                }
+
+                string STRID = cbxCuenta.SelectedItem.ToString();
+                string[] B = STRID.Split('-');
+                int id = Convert.ToInt32(B[0]);
+
+                if (!string.IsNullOrWhiteSpace(msj))
+                {
+                    MessageBox.Show(msj);
+                }
+                else
+                {
+                    Cuenta C = _cuentaServicio.ListarCuentaPorID(id);
+
+                    _cuentaServicio.AgregarSaldo(C);
+
+                    MessageBox.Show("Se agrego el saldo al " + C.IdCliente + " exitosamente", "Mensaje del sistema");
+                }
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.Message);
+            }
         }
     }
 }

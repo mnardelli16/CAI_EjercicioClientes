@@ -42,6 +42,24 @@ namespace EjercicioClientes.Negocio
             return msj;
 
         }
+        public static string ValidarSaldo(string num, string campo, ref float salida)
+        {
+            string msj;
 
+            if (!float.TryParse(num, out salida))
+            {
+                msj = "El campo " + campo + " debe ingresar un valor numerico" + Environment.NewLine;
+            }
+            else if (salida <= 0)
+            {
+                msj = "El campo " + campo + " debe ser positivo" + Environment.NewLine;
+            }
+            else
+            {
+                msj = "";
+            }
+            return msj;
+
+        }
     }
 }

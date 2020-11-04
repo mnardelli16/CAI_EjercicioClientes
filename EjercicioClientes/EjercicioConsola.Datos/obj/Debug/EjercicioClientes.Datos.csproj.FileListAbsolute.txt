@@ -9,3 +9,11 @@ C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\Ejer
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\obj\Debug\EjercicioConsola.Datos.pdb
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\Newtonsoft.Json.dll
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.AccessControl.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.Permissions.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.AccessControl.xml
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.Permissions.xml
+C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioConsola.Datos\bin\Debug\System.Security.Principal.Windows.xml

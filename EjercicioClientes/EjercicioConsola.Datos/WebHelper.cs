@@ -6,6 +6,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace EjercicioConsola.Datos
 {
@@ -18,7 +19,7 @@ namespace EjercicioConsola.Datos
         {
             _client = new WebClient();
             _client.Encoding = Encoding.UTF8;
-            _rutabase = "https://cai-api.azurewebsites.net/api/v1";
+            _rutabase = ConfigurationManager.AppSettings["URL_API"];
 
             _client.Headers.Add("ContentType", "application/json");
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -44,7 +45,7 @@ namespace EjercicioConsola.Datos
 
                 return responseString;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "{ \"isOk\":true,\"id\":5,\"error\":null}";
             }

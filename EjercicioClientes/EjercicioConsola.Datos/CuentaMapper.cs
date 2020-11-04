@@ -22,7 +22,7 @@ namespace EjercicioConsola.Datos
 
         public TransactionResult Insertar(Cuenta C)
         {
-            NameValueCollection obj = ReverseMap(C);
+            NameValueCollection obj = ReverseMap(C, "INSERT");
 
             string result = WebHelper.Post("/cuenta", obj);
 
@@ -31,17 +31,37 @@ namespace EjercicioConsola.Datos
             return resultado;
         }
 
-        private NameValueCollection ReverseMap(Cuenta C)
+        public TransactionResult Update(Cuenta C)
+        {
+            NameValueCollection obj = ReverseMap(C, "UPDATE");
+
+            string result = WebHelper.Post("/cuenta", obj);
+
+            TransactionResult resultado = MapResultado(result);
+
+            return resultado;
+        }
+        private NameValueCollection ReverseMap(Cuenta C, string tipo)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("NroCuenta", C.NroCuenta.ToString());
-            n.Add("Descripcion", C.Descripcion);
-            n.Add("Saldo", C.Saldo.ToString());
+
+            if(tipo == "INSERT")
+            {
+                n.Add("IdCliente", C.IdCliente.ToString());
+                n.Add("Descripcion", C.Descripcion);
+                n.Add("Activo", C.Activo.ToString());
+
+            }
+            else if(tipo == "UPDATE")
+            {
+                n.Add("Id", C.IdCliente.ToString());
+                n.Add("Saldo", C.Saldo.ToString());
+                n.Add("Descripcion", C.Descripcion);
+            }
+
+            //n.Add("NroCuenta", C.NroCuenta.ToString());
             //n.Add("FechaApertura", C.FechaApertura.ToShortDateString());
             //n.Add("FechaModificacion", C.FechaModificacion.ToShortDateString());
-            n.Add("Activo", C.Activo.ToString());
-            n.Add("IdCliente", C.IdCliente.ToString());
-            //n.Add("Id", C.Id.ToString());
 
             return n;
         }
@@ -54,7 +74,7 @@ namespace EjercicioConsola.Datos
 
         public Cuenta TraerCuentaPorID(int id)
         {
-            string json = WebHelper.Get("/cuenta/" + id );
+            string json = WebHelper.Get("/cuenta/" + id.ToString() );
             Cuenta result = JsonConvert.DeserializeObject<Cuenta>(json); // HACE EL MAPLIST
             return result;
         }

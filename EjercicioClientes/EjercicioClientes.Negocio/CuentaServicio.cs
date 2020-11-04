@@ -38,6 +38,17 @@ namespace EjercicioClientes.Negocio
             }
         }
 
+        public void AgregarSaldo(Cuenta C)
+        {
+            TransactionResult resultado = mapper.Update(C);
+
+            if (!resultado.IsOk)
+            {
+                throw new Exception("Hubo un error en la petición al servidor.Detalle: " + resultado.Error);
+            }
+
+        }
+
         public Cuenta ListarCuentaPorID(int id)
         {
             Cuenta C = mapper.TraerCuentaPorID(id);

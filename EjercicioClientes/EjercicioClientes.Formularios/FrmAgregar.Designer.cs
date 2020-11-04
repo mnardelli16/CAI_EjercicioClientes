@@ -237,6 +237,7 @@
             this.Controls.Add(this.grpAgregar);
             this.Name = "FrmAgregar";
             this.Text = "AGREGAR CLIENTES";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAgregar_FormClosed);
             this.grpAgregar.ResumeLayout(false);
             this.grpAgregar.PerformLayout();
             this.ResumeLayout(false);
