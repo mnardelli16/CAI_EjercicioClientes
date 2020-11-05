@@ -11,3 +11,16 @@ C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\Ejer
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.pdb
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\Newtonsoft.Json.dll
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioClientes.Negocio.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioClientes.Negocio.pdb
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioClientes.Entidades.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioConsola.Datos.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioClientes.Entidades.pdb
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\EjercicioConsola.Datos.pdb
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.csprojAssemblyReference.cache
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.csproj.CopyComplete
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Negocio\obj\Debug\EjercicioClientes.Negocio.pdb

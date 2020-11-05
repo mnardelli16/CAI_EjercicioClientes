@@ -4,3 +4,9 @@ C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\Ejer
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.dll
 C:\Users\MNARDELLI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.pdb
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\bin\Debug\EjercicioClientes.Entidades.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\bin\Debug\EjercicioClientes.Entidades.pdb
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.csprojAssemblyReference.cache
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.dll
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Entidades\obj\Debug\EjercicioClientes.Entidades.pdb
