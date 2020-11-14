@@ -47,9 +47,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAgregarSaldo = new System.Windows.Forms.Button();
             this.txtSaldoAgregar = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblSaldoAgregar = new System.Windows.Forms.Label();
             this.cbxCuenta = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblSaldoActual = new System.Windows.Forms.Label();
+            this.txtSaldoActual = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -210,9 +212,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtSaldoActual);
+            this.groupBox2.Controls.Add(this.lblSaldoActual);
             this.groupBox2.Controls.Add(this.btnAgregarSaldo);
             this.groupBox2.Controls.Add(this.txtSaldoAgregar);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.lblSaldoAgregar);
             this.groupBox2.Controls.Add(this.cbxCuenta);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(373, 29);
@@ -224,7 +228,7 @@
             // 
             // btnAgregarSaldo
             // 
-            this.btnAgregarSaldo.Location = new System.Drawing.Point(147, 125);
+            this.btnAgregarSaldo.Location = new System.Drawing.Point(147, 150);
             this.btnAgregarSaldo.Name = "btnAgregarSaldo";
             this.btnAgregarSaldo.Size = new System.Drawing.Size(97, 24);
             this.btnAgregarSaldo.TabIndex = 13;
@@ -234,19 +238,19 @@
             // 
             // txtSaldoAgregar
             // 
-            this.txtSaldoAgregar.Location = new System.Drawing.Point(144, 72);
+            this.txtSaldoAgregar.Location = new System.Drawing.Point(144, 108);
             this.txtSaldoAgregar.Name = "txtSaldoAgregar";
             this.txtSaldoAgregar.Size = new System.Drawing.Size(100, 20);
             this.txtSaldoAgregar.TabIndex = 12;
             // 
-            // label8
+            // lblSaldoAgregar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Saldo";
+            this.lblSaldoAgregar.AutoSize = true;
+            this.lblSaldoAgregar.Location = new System.Drawing.Point(20, 111);
+            this.lblSaldoAgregar.Name = "lblSaldoAgregar";
+            this.lblSaldoAgregar.Size = new System.Drawing.Size(34, 13);
+            this.lblSaldoAgregar.TabIndex = 8;
+            this.lblSaldoAgregar.Text = "Saldo";
             // 
             // cbxCuenta
             // 
@@ -255,6 +259,7 @@
             this.cbxCuenta.Name = "cbxCuenta";
             this.cbxCuenta.Size = new System.Drawing.Size(121, 21);
             this.cbxCuenta.TabIndex = 7;
+            this.cbxCuenta.SelectedIndexChanged += new System.EventHandler(this.cbxCuenta_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -265,6 +270,23 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Cuenta";
             // 
+            // lblSaldoActual
+            // 
+            this.lblSaldoActual.AutoSize = true;
+            this.lblSaldoActual.Location = new System.Drawing.Point(20, 79);
+            this.lblSaldoActual.Name = "lblSaldoActual";
+            this.lblSaldoActual.Size = new System.Drawing.Size(67, 13);
+            this.lblSaldoActual.TabIndex = 14;
+            this.lblSaldoActual.Text = "Saldo Actual";
+            // 
+            // txtSaldoActual
+            // 
+            this.txtSaldoActual.Enabled = false;
+            this.txtSaldoActual.Location = new System.Drawing.Point(144, 76);
+            this.txtSaldoActual.Name = "txtSaldoActual";
+            this.txtSaldoActual.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldoActual.TabIndex = 15;
+            // 
             // FrmAgregarCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +296,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
             this.Name = "FrmAgregarCuentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Cuentas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -304,8 +327,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAgregarSaldo;
         private System.Windows.Forms.TextBox txtSaldoAgregar;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblSaldoAgregar;
         private System.Windows.Forms.ComboBox cbxCuenta;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblSaldoActual;
+        private System.Windows.Forms.TextBox txtSaldoActual;
     }
 }

@@ -54,14 +54,9 @@ namespace EjercicioConsola.Datos
             }
             else if(tipo == "UPDATE")
             {
-                n.Add("Id", C.IdCliente.ToString());
+                n.Add("id", C.Id.ToString());
                 n.Add("Saldo", C.Saldo.ToString());
-                n.Add("Descripcion", C.Descripcion);
             }
-
-            //n.Add("NroCuenta", C.NroCuenta.ToString());
-            //n.Add("FechaApertura", C.FechaApertura.ToShortDateString());
-            //n.Add("FechaModificacion", C.FechaModificacion.ToShortDateString());
 
             return n;
         }
@@ -72,9 +67,9 @@ namespace EjercicioConsola.Datos
             return lst;
         }
 
-        public Cuenta TraerCuentaPorID(int id)
+        public Cuenta TraerCuentaPorID(int idCliente)
         {
-            string json = WebHelper.Get("/cuenta/" + id.ToString() );
+            string json = WebHelper.Get("/cuenta/" + idCliente.ToString() );
             Cuenta result = JsonConvert.DeserializeObject<Cuenta>(json); // HACE EL MAPLIST
             return result;
         }

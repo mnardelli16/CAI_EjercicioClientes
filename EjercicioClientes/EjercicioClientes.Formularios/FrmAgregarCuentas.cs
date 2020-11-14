@@ -40,7 +40,7 @@ namespace EjercicioClientes.Formularios
         {
             try
             {
-                bool _activo = false;
+                bool _activo = false ;
                 string _descpricion;
                 string _fechaApertura = dateTimePicker1.Text;
                 string _STRIdcliente;
@@ -68,13 +68,16 @@ namespace EjercicioClientes.Formularios
                 string[] a = _STRIdcliente.Split('-');
                 _idCliente = Convert.ToInt32(a[0]);
 
-                Cuenta C = new Cuenta(1,0,_descpricion, _fechaApertura, _activo, _idCliente, TraerProximoID());
+                Cuenta C = new Cuenta();
+                C.IdCliente = _idCliente;
+                C.Descripcion = _descpricion;
+                C.Activo = _activo;
 
                 _cuentaServicio.InsertarCuenta(C);
 
                 MessageBox.Show("Se agrego la cuenta al cliente " + C.IdCliente + " exitosamente","Mensaje del sistema");
 
-                Cuenta Aux = _cuentaServicio.ListarCuentaPorID(C.IdCliente);
+                Cuenta Aux = _cuentaServicio.ListarCuentaPorIDCliente(C.IdCliente);
 
                 txtNroCuenta.Text = Aux.NroCuenta.ToString();
                 txtSaldo.Text = Aux.Saldo.ToString();
@@ -106,28 +109,15 @@ namespace EjercicioClientes.Formularios
 
         private void AgregarCuentasCombo()
         {
+            cbxCuenta.Items.Clear();
             List<Cuenta> lst = _cuentaServicio.ListarTodas();
 
             foreach(Cuenta C in lst)
             {
-                cbxCuenta.Items.Add(C.IdCliente + " - " + C.NroCuenta);
+                cbxCuenta.Items.Add(C.Id + " - " + C.NroCuenta + " - " + C.IdCliente);
             }
         }
 
-        private int TraerProximoID()
-        {
-            List<Cuenta> ccc = _cuentaServicio.ListarTodas();
-            int contador = 0;
-            foreach(Cuenta C in ccc)
-            {
-                if(C.Id > contador)
-                {
-                    contador = C.Id;
-                }
-            }
-            return contador + 1;
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -158,7 +148,7 @@ namespace EjercicioClientes.Formularios
 
                 string STRID = cbxCuenta.SelectedItem.ToString();
                 string[] B = STRID.Split('-');
-                int id = Convert.ToInt32(B[0]);
+                int idcuenta = Convert.ToInt32(B[0]);
 
                 if (!string.IsNullOrWhiteSpace(msj))
                 {
@@ -166,16 +156,41 @@ namespace EjercicioClientes.Formularios
                 }
                 else
                 {
-                    Cuenta C = _cuentaServicio.ListarCuentaPorID(id);
+                    Cuenta C = _cuentaServicio.ListarCuentaPorIDCliente(Convert.ToInt32(B[2]));
 
-                    _cuentaServicio.AgregarSaldo(C);
+                    float saldonuevo = C.Saldo + _saldo;
 
-                    MessageBox.Show("Se agrego el saldo al " + C.IdCliente + " exitosamente", "Mensaje del sistema");
+                    _cuentaServicio.AgregarSaldo(idcuenta, saldonuevo);
+
+                    MessageBox.Show("Se agrego el saldo exitosamente", "Mensaje del sistema");
+
+                    txtSaldoAgregar.Clear();
+                    txtSaldoActual.Clear();
                 }
             }
             catch (Exception es)
             {
                 MessageBox.Show(es.Message);
+            }
+        }
+
+        private void cbxCuenta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbxCuenta.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una cuenta");
+            }
+            else
+            {
+                var obj = cbxCuenta.SelectedItem;
+
+                string[] idv = obj.ToString().Split('-');
+
+                int idcliente = Convert.ToInt32(idv[2]);
+
+                Cuenta C = _cuentaServicio.ListarCuentaPorIDCliente(idcliente);
+
+                txtSaldoActual.Text = C.Saldo.ToString();
             }
         }
     }

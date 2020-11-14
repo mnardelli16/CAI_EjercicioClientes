@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -76,6 +77,12 @@
     <Compile Include="FrmListarCuentas.Designer.cs">
       <DependentUpon>FrmListarCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModuloPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModuloPrestamos.Designer.cs">
+      <DependentUpon>frmModuloPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAgregar.resx">
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListarCuentas.resx">
       <DependentUpon>FrmListarCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModuloPrestamos.resx">
+      <DependentUpon>frmModuloPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

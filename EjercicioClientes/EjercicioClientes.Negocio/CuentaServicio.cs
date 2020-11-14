@@ -12,16 +12,32 @@ namespace EjercicioClientes.Negocio
     public class CuentaServicio
     {
         private CuentaMapper mapper;
-
+        internal List<Cuenta> _lstCuentas;
+        ClienteServicio clienteServicio;
         public CuentaServicio()
         {
             mapper = new CuentaMapper();
+            _lstCuentas = new List<Cuenta>();
+            clienteServicio = new ClienteServicio();
         }
 
         public List<Cuenta> ListarTodas()
         {
-            List<Cuenta> lst = mapper.TraerTodasLasCuentas();
-            return lst;
+            List<Cuenta> aux = mapper.TraerTodasLasCuentas();
+            List<Cuenta> listado = new List<Cuenta>();
+
+            foreach (Cuenta Cue in aux)
+            {
+                foreach(Cliente C in clienteServicio._lstClientes) // TRAIGO SOLO LAS CUENTAS DE MIS CLIENTES
+                {
+                    if(C.Id == Cue.IdCliente)
+                    {
+                        listado.Add(Cue);
+                    }
+                }
+            }
+
+            return listado;
         }
 
         public int InsertarCuenta(Cuenta C)
@@ -38,8 +54,12 @@ namespace EjercicioClientes.Negocio
             }
         }
 
-        public void AgregarSaldo(Cuenta C)
+        public void AgregarSaldo(int idcuenta, float saldo)
         {
+            Cuenta C = new Cuenta();
+            C.Id = idcuenta;
+            C.Saldo = saldo;
+
             TransactionResult resultado = mapper.Update(C);
 
             if (!resultado.IsOk)
@@ -49,9 +69,9 @@ namespace EjercicioClientes.Negocio
 
         }
 
-        public Cuenta ListarCuentaPorID(int id)
+        public Cuenta ListarCuentaPorIDCliente(int idCliente)
         {
-            Cuenta C = mapper.TraerCuentaPorID(id);
+            Cuenta C = mapper.TraerCuentaPorID(idCliente);
             return C;
         }
 

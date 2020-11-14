@@ -11,17 +11,18 @@ namespace EjercicioClientes.Negocio
     public class ClienteServicio
     {
         private ClienteMapper mapper;
-
+        internal List<Cliente> _lstClientes;
         public ClienteServicio()
         {
             mapper = new ClienteMapper();
+            _lstClientes = TraerClientes();
         }
 
         public List<Cliente> TraerClientes()  
         {
-            List<Cliente> result = mapper.TraerTodos(); // yo aca podria hacer algun tipo de filtro en lugar de traer todos los clientes
+            _lstClientes = mapper.TraerTodos(); // yo aca podria hacer algun tipo de filtro en lugar de traer todos los clientes
                                                         // estariamos duplicando el metodo en este sentido
-            return result;
+            return _lstClientes;
         }
 
 

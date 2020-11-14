@@ -32,10 +32,24 @@ namespace EjercicioClientes.Formularios
             dataGridView1.Columns.Add("apellido", "Apellido");
             dataGridView1.Columns.Add("direccion", "Direccion");
             dataGridView1.Columns.Add("email", "Email");
+            dataGridView1.Columns.Add("telefono", "Telefono");
+            dataGridView1.Columns.Add("activo", "Activo");
 
             foreach (Cliente c in lst)
             {
-                dataGridView1.Rows.Add(c.Id, c.Nombre, c.Apellido,c.Direccion,c.Email);
+                dataGridView1.Rows.Add(c.Id, c.Nombre, c.Apellido,c.Direccion,c.Email,c.Telefono,DeterminarClienteActivo(c.Activo));
+            }
+        }
+
+        private string DeterminarClienteActivo(bool activo)
+        {
+            if (activo)
+            {
+                return "SI";
+            }
+            else
+            {
+                return "NO";
             }
         }
 

@@ -54,5 +54,13 @@ namespace EjercicioClientes.Formularios
             CuentasA.Show();
             this.Hide();
         }
+
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+            frmModuloPrestamos Prestamos = new frmModuloPrestamos();
+            Prestamos.Owner = this;
+            Prestamos.Show();
+            this.Hide();
+        }
     }
 }

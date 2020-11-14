@@ -13,10 +13,10 @@ namespace EjercicioConsola.Datos
 {
     public class ClienteMapper // MAPEADORES DE LOS SERVICIOS QUE NECESITAMOS
     {
-
-        public List<Cliente> TraerTodos() // trae a todos los clientes que estane en el GET
+        string reg = ConfigurationManager.AppSettings["Legajo"];
+        public List<Cliente> TraerTodos() // trae a todos los clientes donde el usuario registro soy yo
         {
-            string json2 = WebHelper.Get("/cliente");
+            string json2 = WebHelper.Get("/cliente/" + Convert.ToInt32(reg));
             List<Cliente> resultado = MapList(json2);
             return resultado;
         }
