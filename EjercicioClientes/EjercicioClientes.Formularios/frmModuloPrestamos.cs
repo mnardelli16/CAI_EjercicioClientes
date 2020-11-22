@@ -52,7 +52,8 @@ namespace EjercicioClientes.Formularios
 
         private void CargarPrestamos()
         {
-            lstPrestamosDadosDeAlta.DataSource = _prestamoServicio.TraertodoslosPrestamos();
+            lstPrestamosDadosDeAlta.DataSource = _prestamoServicio.TraertodoslosPrestamos().ListaPrestamos;
+            txtComisionTotal.Text = _prestamoServicio.TraertodoslosPrestamos().Comision.ToString();
         }
 
         private void lstTipoPrestamos_SelectedIndexChanged(object sender, EventArgs e)

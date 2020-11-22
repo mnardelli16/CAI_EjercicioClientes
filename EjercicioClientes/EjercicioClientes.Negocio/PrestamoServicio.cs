@@ -17,9 +17,18 @@ namespace EjercicioClientes.Negocio
             _mapper = new PrestamoMapper();
         }
 
-        public List<Prestamo> TraertodoslosPrestamos()
+        public Operador TraertodoslosPrestamos()
         {
-            return _mapper.TraerTodosLosPrestamos();
+            List<Prestamo> aux = new List<Prestamo>();
+
+            foreach (Prestamo P in _mapper.TraerTodosLosPrestamos())
+            {
+                aux.Add(P);
+            }
+
+            Operador B = new Operador(aux);
+
+            return B;
         }
 
         public int InsertarPrestamo(Prestamo P)

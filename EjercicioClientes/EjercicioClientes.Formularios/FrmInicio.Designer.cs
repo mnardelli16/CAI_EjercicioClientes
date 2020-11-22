@@ -38,9 +38,12 @@
             this.btnAgregarCuentas = new System.Windows.Forms.Button();
             this.grpPrestamos = new System.Windows.Forms.GroupBox();
             this.btnPrestamos = new System.Windows.Forms.Button();
+            this.grpTarjetas = new System.Windows.Forms.GroupBox();
+            this.btnTarjetas = new System.Windows.Forms.Button();
             this.grpClientes.SuspendLayout();
             this.grpCuentas.SuspendLayout();
             this.grpPrestamos.SuspendLayout();
+            this.grpTarjetas.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +79,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(306, 532);
+            this.btnSalir.Location = new System.Drawing.Point(326, 532);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(95, 35);
             this.btnSalir.TabIndex = 3;
@@ -90,7 +93,7 @@
             this.grpClientes.Controls.Add(this.btnAgregar);
             this.grpClientes.Location = new System.Drawing.Point(59, 74);
             this.grpClientes.Name = "grpClientes";
-            this.grpClientes.Size = new System.Drawing.Size(657, 100);
+            this.grpClientes.Size = new System.Drawing.Size(657, 87);
             this.grpClientes.TabIndex = 4;
             this.grpClientes.TabStop = false;
             this.grpClientes.Text = "CLIENTES";
@@ -99,9 +102,9 @@
             // 
             this.grpCuentas.Controls.Add(this.btnListarCuentas);
             this.grpCuentas.Controls.Add(this.btnAgregarCuentas);
-            this.grpCuentas.Location = new System.Drawing.Point(59, 196);
+            this.grpCuentas.Location = new System.Drawing.Point(59, 181);
             this.grpCuentas.Name = "grpCuentas";
-            this.grpCuentas.Size = new System.Drawing.Size(657, 100);
+            this.grpCuentas.Size = new System.Drawing.Size(657, 87);
             this.grpCuentas.TabIndex = 5;
             this.grpCuentas.TabStop = false;
             this.grpCuentas.Text = "CUENTAS";
@@ -129,16 +132,16 @@
             // grpPrestamos
             // 
             this.grpPrestamos.Controls.Add(this.btnPrestamos);
-            this.grpPrestamos.Location = new System.Drawing.Point(59, 323);
+            this.grpPrestamos.Location = new System.Drawing.Point(59, 292);
             this.grpPrestamos.Name = "grpPrestamos";
-            this.grpPrestamos.Size = new System.Drawing.Size(657, 100);
+            this.grpPrestamos.Size = new System.Drawing.Size(657, 81);
             this.grpPrestamos.TabIndex = 6;
             this.grpPrestamos.TabStop = false;
             this.grpPrestamos.Text = "PRESTAMOS";
             // 
             // btnPrestamos
             // 
-            this.btnPrestamos.Location = new System.Drawing.Point(235, 39);
+            this.btnPrestamos.Location = new System.Drawing.Point(234, 29);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Size = new System.Drawing.Size(162, 35);
             this.btnPrestamos.TabIndex = 1;
@@ -146,11 +149,32 @@
             this.btnPrestamos.UseVisualStyleBackColor = true;
             this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
+            // grpTarjetas
+            // 
+            this.grpTarjetas.Controls.Add(this.btnTarjetas);
+            this.grpTarjetas.Location = new System.Drawing.Point(59, 401);
+            this.grpTarjetas.Name = "grpTarjetas";
+            this.grpTarjetas.Size = new System.Drawing.Size(657, 81);
+            this.grpTarjetas.TabIndex = 7;
+            this.grpTarjetas.TabStop = false;
+            this.grpTarjetas.Text = "TARJETAS DE CREDITO";
+            // 
+            // btnTarjetas
+            // 
+            this.btnTarjetas.Location = new System.Drawing.Point(234, 29);
+            this.btnTarjetas.Name = "btnTarjetas";
+            this.btnTarjetas.Size = new System.Drawing.Size(162, 35);
+            this.btnTarjetas.TabIndex = 1;
+            this.btnTarjetas.Text = "Modulo de Tarjetas";
+            this.btnTarjetas.UseVisualStyleBackColor = true;
+            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 596);
+            this.Controls.Add(this.grpTarjetas);
             this.Controls.Add(this.grpPrestamos);
             this.Controls.Add(this.grpCuentas);
             this.Controls.Add(this.grpClientes);
@@ -162,6 +186,7 @@
             this.grpClientes.ResumeLayout(false);
             this.grpCuentas.ResumeLayout(false);
             this.grpPrestamos.ResumeLayout(false);
+            this.grpTarjetas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +204,7 @@
         private System.Windows.Forms.Button btnAgregarCuentas;
         private System.Windows.Forms.GroupBox grpPrestamos;
         private System.Windows.Forms.Button btnPrestamos;
+        private System.Windows.Forms.GroupBox grpTarjetas;
+        private System.Windows.Forms.Button btnTarjetas;
     }
 }

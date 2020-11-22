@@ -45,3 +45,4 @@ C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\Ejercicio
 C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Formularios\obj\Debug\EjercicioClientes.Formularios.exe
 C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Formularios\obj\Debug\EjercicioClientes.Formularios.pdb
 C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Formularios\obj\Debug\EjercicioClientes.Formularios.frmModuloPrestamos.resources
+C:\Users\MAXI\Documents\GitHub\CAI_EjercicioClientes\EjercicioClientes\EjercicioClientes.Formularios\obj\Debug\EjercicioClientes.Formularios.frmTarjetas.resources

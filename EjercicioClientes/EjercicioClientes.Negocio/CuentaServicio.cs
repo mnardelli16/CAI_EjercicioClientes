@@ -54,15 +54,24 @@ namespace EjercicioClientes.Negocio
             }
         }
 
-        public void AgregarSaldo(int idcuenta, float saldo)
+        public void AgregarSaldo(int idcuenta, float saldonuevo, float acreditacion)
         {
             Cuenta C = new Cuenta();
             C.Id = idcuenta;
-            C.Saldo = saldo;
+            C.Saldo = saldonuevo;
 
             TransactionResult resultado = mapper.Update(C);
 
             if (!resultado.IsOk)
+            {
+                throw new Exception("Hubo un error en la petición al servidor.Detalle: " + resultado.Error);
+            }
+
+            Utilidades U = new Utilidades(idcuenta, C.Saldo, acreditacion);
+
+            TransactionResult enviomail = mapper.EnviarEmail(U);
+
+            if (!enviomail.IsOk)
             {
                 throw new Exception("Hubo un error en la petición al servidor.Detalle: " + resultado.Error);
             }

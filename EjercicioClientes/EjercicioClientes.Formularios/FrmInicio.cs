@@ -62,5 +62,13 @@ namespace EjercicioClientes.Formularios
             Prestamos.Show();
             this.Hide();
         }
+
+        private void btnTarjetas_Click(object sender, EventArgs e)
+        {
+            frmTarjetas Tarjetas = new frmTarjetas();
+            Tarjetas.Owner = this;
+            Tarjetas.Show();
+            this.Hide();
+        }
     }
 }

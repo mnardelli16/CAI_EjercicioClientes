@@ -31,8 +31,6 @@ namespace EjercicioClientes.Formularios
         {
             List<Cuenta> lst = cuentaServicio.ListarTodas();
 
-
-
             dataGridView1.DataSource = lst;
         }
     }

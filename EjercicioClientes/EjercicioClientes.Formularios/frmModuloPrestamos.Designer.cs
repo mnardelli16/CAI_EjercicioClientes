@@ -30,6 +30,8 @@ namespace EjercicioClientes.Formularios
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnSimular = new System.Windows.Forms.Button();
             this.txtCuotaTotal = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@ namespace EjercicioClientes.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,25 @@ namespace EjercicioClientes.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(635, 488);
             this.panel1.TabIndex = 0;
+            // 
+            // cbxCliente
+            // 
+            this.cbxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Location = new System.Drawing.Point(454, 55);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(157, 21);
+            this.cbxCliente.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(360, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Cliente";
             // 
             // btnAlta
             // 
@@ -268,13 +287,13 @@ namespace EjercicioClientes.Formularios
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(674, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(326, 426);
+            this.panel2.Size = new System.Drawing.Size(601, 426);
             this.panel2.TabIndex = 1;
             // 
             // txtComisionTotal
             // 
             this.txtComisionTotal.Enabled = false;
-            this.txtComisionTotal.Location = new System.Drawing.Point(169, 382);
+            this.txtComisionTotal.Location = new System.Drawing.Point(439, 380);
             this.txtComisionTotal.Name = "txtComisionTotal";
             this.txtComisionTotal.Size = new System.Drawing.Size(138, 20);
             this.txtComisionTotal.TabIndex = 14;
@@ -284,7 +303,7 @@ namespace EjercicioClientes.Formularios
             this.lstPrestamosDadosDeAlta.FormattingEnabled = true;
             this.lstPrestamosDadosDeAlta.Location = new System.Drawing.Point(19, 58);
             this.lstPrestamosDadosDeAlta.Name = "lstPrestamosDadosDeAlta";
-            this.lstPrestamosDadosDeAlta.Size = new System.Drawing.Size(288, 290);
+            this.lstPrestamosDadosDeAlta.Size = new System.Drawing.Size(558, 290);
             this.lstPrestamosDadosDeAlta.TabIndex = 9;
             // 
             // label3
@@ -312,7 +331,7 @@ namespace EjercicioClientes.Formularios
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(800, 470);
+            this.btnVolver.Location = new System.Drawing.Point(1075, 470);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(200, 30);
             this.btnVolver.TabIndex = 17;
@@ -320,30 +339,11 @@ namespace EjercicioClientes.Formularios
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(360, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Cliente";
-            // 
-            // cbxCliente
-            // 
-            this.cbxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCliente.FormattingEnabled = true;
-            this.cbxCliente.Location = new System.Drawing.Point(454, 55);
-            this.cbxCliente.Name = "cbxCliente";
-            this.cbxCliente.Size = new System.Drawing.Size(157, 21);
-            this.cbxCliente.TabIndex = 20;
-            // 
             // frmModuloPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 521);
+            this.ClientSize = new System.Drawing.Size(1328, 521);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

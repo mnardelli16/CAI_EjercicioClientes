@@ -41,6 +41,7 @@ namespace EjercicioConsola.Datos
 
             return resultado;
         }
+
         private NameValueCollection ReverseMap(Cuenta C, string tipo)
         {
             NameValueCollection n = new NameValueCollection();
@@ -73,5 +74,28 @@ namespace EjercicioConsola.Datos
             Cuenta result = JsonConvert.DeserializeObject<Cuenta>(json); // HACE EL MAPLIST
             return result;
         }
+
+        public TransactionResult EnviarEmail(Utilidades U)
+        {
+            NameValueCollection obj = ReverseMapUtilidades(U);
+
+            string result = WebHelper.Post("/utilidades", obj);
+
+            TransactionResult resultado = MapResultado(result);
+
+            return resultado;
+        }
+
+        public NameValueCollection ReverseMapUtilidades(Utilidades U)
+        {
+            NameValueCollection n = new NameValueCollection();
+
+            n.Add("Para", U.Email.ToString());
+            n.Add("Asunto", U.Asunto.ToString());
+            n.Add("Mensaje", U.Mensaje.ToString());
+
+            return n;
+        }
+
     }
 }

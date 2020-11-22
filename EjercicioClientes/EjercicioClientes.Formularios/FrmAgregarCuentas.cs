@@ -160,7 +160,7 @@ namespace EjercicioClientes.Formularios
 
                     float saldonuevo = C.Saldo + _saldo;
 
-                    _cuentaServicio.AgregarSaldo(idcuenta, saldonuevo);
+                    _cuentaServicio.AgregarSaldo(idcuenta, saldonuevo, _saldo);
 
                     MessageBox.Show("Se agrego el saldo exitosamente", "Mensaje del sistema");
 

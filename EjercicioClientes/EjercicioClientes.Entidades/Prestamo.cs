@@ -40,6 +40,8 @@ namespace EjercicioClientes.Entidades
 
         public double Cuota { get => this._cuota; set => this._cuota = value; }
 
+        public double CuotaInteres { get => this._cuotaInteres; set => this._cuotaInteres = value; }
+
         public Prestamo(double tna, string linea, int plazo, int idcliente, double monto, double cuotatotal)
         {
             this._tna = tna;
@@ -54,7 +56,7 @@ namespace EjercicioClientes.Entidades
 
         public override string ToString()
         {
-            return string.Format("ID: {0} - TNA: {1} - LINEA: {2} - PLAZO: {3}", this.Id, this._tna, this._linea, this._plazo);
+            return string.Format("ID: {0} - TNA: {1} - PLAZO: {2} - MONTO: {3} - CUOTA CAP: {4} - CUOTA INT: {5}", this.Id, this._tna, this._plazo, this._monto, this._cuotaCapital,this._cuotaInteres);
         }
     }
 }
