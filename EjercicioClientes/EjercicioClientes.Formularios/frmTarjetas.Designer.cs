@@ -38,15 +38,15 @@ namespace EjercicioClientes.Formularios
             this.cbxPeriodoVencimiento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLimiteCompra = new System.Windows.Forms.TextBox();
-            this.lblNroTarjeta = new System.Windows.Forms.Label();
             this.btnAltaTarjeta = new System.Windows.Forms.Button();
-            this.txtNroTarjeta = new System.Windows.Forms.TextBox();
+            this.lstTarjetas = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(604, 388);
+            this.btnVolver.Location = new System.Drawing.Point(872, 388);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(92, 30);
             this.btnVolver.TabIndex = 18;
@@ -61,6 +61,7 @@ namespace EjercicioClientes.Formularios
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(176, 21);
             this.cbxCliente.TabIndex = 19;
+            this.cbxCliente.SelectedIndexChanged += new System.EventHandler(this.cbxCliente_SelectedIndexChanged);
             // 
             // lblCliente
             // 
@@ -121,15 +122,6 @@ namespace EjercicioClientes.Formularios
             this.txtLimiteCompra.Size = new System.Drawing.Size(127, 20);
             this.txtLimiteCompra.TabIndex = 26;
             // 
-            // lblNroTarjeta
-            // 
-            this.lblNroTarjeta.AutoSize = true;
-            this.lblNroTarjeta.Location = new System.Drawing.Point(36, 346);
-            this.lblNroTarjeta.Name = "lblNroTarjeta";
-            this.lblNroTarjeta.Size = new System.Drawing.Size(106, 13);
-            this.lblNroTarjeta.TabIndex = 27;
-            this.lblNroTarjeta.Text = "NUMERO TARJETA";
-            // 
             // btnAltaTarjeta
             // 
             this.btnAltaTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,22 +133,31 @@ namespace EjercicioClientes.Formularios
             this.btnAltaTarjeta.UseVisualStyleBackColor = true;
             this.btnAltaTarjeta.Click += new System.EventHandler(this.btnAltaTarjeta_Click);
             // 
-            // txtNroTarjeta
+            // lstTarjetas
             // 
-            this.txtNroTarjeta.Enabled = false;
-            this.txtNroTarjeta.Location = new System.Drawing.Point(142, 343);
-            this.txtNroTarjeta.Name = "txtNroTarjeta";
-            this.txtNroTarjeta.Size = new System.Drawing.Size(210, 20);
-            this.txtNroTarjeta.TabIndex = 29;
+            this.lstTarjetas.FormattingEnabled = true;
+            this.lstTarjetas.Location = new System.Drawing.Point(416, 62);
+            this.lstTarjetas.Name = "lstTarjetas";
+            this.lstTarjetas.Size = new System.Drawing.Size(548, 303);
+            this.lstTarjetas.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(413, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(220, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "TARJETAS DEL CLIENTE SELECCIONADO";
             // 
             // frmTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtNroTarjeta);
+            this.ClientSize = new System.Drawing.Size(1006, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lstTarjetas);
             this.Controls.Add(this.btnAltaTarjeta);
-            this.Controls.Add(this.lblNroTarjeta);
             this.Controls.Add(this.txtLimiteCompra);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxPeriodoVencimiento);
@@ -185,8 +186,8 @@ namespace EjercicioClientes.Formularios
         private System.Windows.Forms.ComboBox cbxPeriodoVencimiento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLimiteCompra;
-        private System.Windows.Forms.Label lblNroTarjeta;
         private System.Windows.Forms.Button btnAltaTarjeta;
-        private System.Windows.Forms.TextBox txtNroTarjeta;
+        private System.Windows.Forms.ListBox lstTarjetas;
+        private System.Windows.Forms.Label label4;
     }
 }

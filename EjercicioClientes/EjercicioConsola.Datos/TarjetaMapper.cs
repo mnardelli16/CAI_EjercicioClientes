@@ -29,7 +29,7 @@ namespace EjercicioConsola.Datos
             return resultado;
         }
 
-        public TransactionResult Insertar(Tarjeta T)
+        public TransactionResult InsertarTarjeta(Tarjeta T)
         {
             NameValueCollection obj = ReverseMap(T);
 
@@ -46,7 +46,7 @@ namespace EjercicioConsola.Datos
             NameValueCollection n = new NameValueCollection();
 
             n.Add("Tipo", T.Tipo.ToString());
-            n.Add("PeriodoVencimiento", T.PeridoDeVencimiento.ToString());
+            n.Add("PeriodoVencimiento", T.PeriodoVencimiento.ToString());
             n.Add("LimiteCompra", T.LimiteCompra.ToString());
             n.Add("NroPlastico", T.NroPlastico.ToString());
             n.Add("Usuario", T.Usuario.ToString());

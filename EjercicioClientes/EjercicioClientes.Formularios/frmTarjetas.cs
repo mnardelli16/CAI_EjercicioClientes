@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static EjercicioClientes.Entidades.Tarjeta;
 
 namespace EjercicioClientes.Formularios
 {
@@ -28,11 +29,11 @@ namespace EjercicioClientes.Formularios
 
         private void CargarVencimientos()
         {
-            cbxPeriodoVencimiento.Items.Add("Primera_Semana");
-            cbxPeriodoVencimiento.Items.Add("Segunda_Semana");
-            cbxPeriodoVencimiento.Items.Add("Tercera_Semana");
-            cbxPeriodoVencimiento.Items.Add("Cuarta_Semana");
-
+            cbxPeriodoVencimiento.Items.Add("Primera Semana");
+            cbxPeriodoVencimiento.Items.Add("Segunda Semana");
+            cbxPeriodoVencimiento.Items.Add("Tercera Semana");
+            cbxPeriodoVencimiento.Items.Add("Cuarta Semana");
+             
         }
 
         private void CargarTiposTarjetas()
@@ -86,19 +87,93 @@ namespace EjercicioClientes.Formularios
                     string[] vector = obj.ToString().Split('-');
 
                     int idcliente = Convert.ToInt32(vector[0]);
+                    
+                    int tipotarjeta = 0;
 
+                    if(cbxTipoTarjeta.SelectedItem.ToString() == "Visa")
+                    {
+                        tipotarjeta = 1;
+                    }
+                    if (cbxTipoTarjeta.SelectedItem.ToString() == "MasterCard")
+                    {
+                        tipotarjeta = 2;
+                    }
+                    if (cbxTipoTarjeta.SelectedItem.ToString() == "American")
+                    {
+                        tipotarjeta = 3;
+                    }
+
+                    int peridovencimiento = 0;
+
+                    if(cbxPeriodoVencimiento.SelectedItem.ToString() == "Primera Semana")
+                    {
+                        peridovencimiento = 1;
+                    }
+                    if (cbxPeriodoVencimiento.SelectedItem.ToString() == "Segunda Semana")
+                    {
+                        peridovencimiento = 2;
+                    }
+                    if (cbxPeriodoVencimiento.SelectedItem.ToString() == "Tercera Semana")
+                    {
+                        peridovencimiento = 3;
+                    }
+                    if (cbxPeriodoVencimiento.SelectedItem.ToString() == "Cuarta Semana")
+                    {
+                        peridovencimiento = 4;
+                    }
+
+                    double limitecompra = 0;
+                    string strLimite = txtLimiteCompra.Text;
+
+                    string msj = Validaciones.ValidarMonto(strLimite, "Limite de compra", ref limitecompra);
+
+                    if (!string.IsNullOrWhiteSpace(msj))
+                    {
+                        MessageBox.Show(msj);
+                    }
+                    else
+                    {
+                        _tarjetaServicio.DarDeAltaTarjeta(idcliente, tipotarjeta, peridovencimiento, limitecompra);
+
+                        MessageBox.Show("Se dio de alta correctamente la tajerta");
+
+                        LimpiarCampos();
+
+                        List<Tarjeta> lsttar = _tarjetaServicio.TraerTarjetadeunCliente(idcliente);
+
+                        lstTarjetas.DataSource = lsttar;
+
+                    }
 
                 }
-
-
-
-
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            cbxPeriodoVencimiento.SelectedIndex = -1;
+            cbxTipoTarjeta.SelectedIndex = -1;
+            txtLimiteCompra.Clear();
+        }
+
+        private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var obj = cbxCliente.SelectedItem;
+
+            string[] idv = obj.ToString().Split('-');
+
+            int idcliente = Convert.ToInt32(idv[0]);
+
+            List<Tarjeta> lsttar = _tarjetaServicio.TraerTarjetadeunCliente(idcliente);
+
+            lstTarjetas.DataSource = lsttar;
+
+
         }
     }
 }
