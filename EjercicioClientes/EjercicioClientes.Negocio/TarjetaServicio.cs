@@ -57,7 +57,21 @@ namespace EjercicioClientes.Negocio
 
             //SI EL CLIENTE YA TIENE UN TARJETA DEL MISMO TIPO NO PUEDE
 
-            foreach(Tarjeta D  in lsttarcliente)
+            if(lsttarcliente.Any(x => x.Tipo == tipo) && tipo == Convert.ToInt32(TipoTarjeta.Visa))
+            {
+                throw new Exception("El cliente ya tiene una tarjeta Visa");
+            }
+            if (lsttarcliente.Any(x => x.Tipo == tipo) && tipo == Convert.ToInt32(TipoTarjeta.MasterCard))
+            {
+                throw new Exception("El cliente ya tiene una tarjeta MasterCard");
+            }
+            if (lsttarcliente.Any(x => x.Tipo == tipo) && tipo == Convert.ToInt32(TipoTarjeta.American))
+            {
+                throw new Exception("El cliente ya tiene una tarjeta American");
+            }
+
+            /*
+            foreach (Tarjeta D  in lsttarcliente)
             {
                 if(tipo == Convert.ToInt32(TipoTarjeta.Visa) && tipo == D.Tipo)
                 {
@@ -72,7 +86,7 @@ namespace EjercicioClientes.Negocio
                     throw new Exception("El cliente ya tiene una tarjeta American");
                 }
             }
-
+            */
             List<Tarjeta> lstTarjeta = _mapper.TraerTarjetas();
 
             int ultimoplastico = 0;
@@ -86,7 +100,7 @@ namespace EjercicioClientes.Negocio
                         ultimoplastico = Convert.ToInt32(A.NroPlastico.Substring(14));
                     }
                 }
-            }
+            }   
 
             string nroplastico = GenerarNumeroPlastico(tipo, ultimoplastico);
 

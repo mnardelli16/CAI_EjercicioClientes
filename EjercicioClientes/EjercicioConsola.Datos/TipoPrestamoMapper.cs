@@ -8,9 +8,9 @@ using Newtonsoft.Json;
 
 namespace EjercicioConsola.Datos
 {
-    public class TipoPrestamoMapper
+    public static class TipoPrestamoMapper
     { 
-        public List<TipoPrestamos> TraerTiposdePrestamos()
+        public static List<TipoPrestamos> TraerTiposdePrestamos()
         {
             string json = WebHelper.Get("/prestamotipo");
             List<TipoPrestamos> resul = JsonConvert.DeserializeObject<List<TipoPrestamos>>(json);

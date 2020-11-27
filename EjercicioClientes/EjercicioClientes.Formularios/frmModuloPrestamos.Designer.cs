@@ -56,12 +56,14 @@ namespace EjercicioClientes.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLimpiarCampos);
             this.panel1.Controls.Add(this.cbxCliente);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnAlta);
@@ -339,6 +341,17 @@ namespace EjercicioClientes.Formularios
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(106, 439);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(219, 30);
+            this.btnLimpiarCampos.TabIndex = 21;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
             // frmModuloPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +400,6 @@ namespace EjercicioClientes.Formularios
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cbxCliente;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnLimpiarCampos;
     }
 }

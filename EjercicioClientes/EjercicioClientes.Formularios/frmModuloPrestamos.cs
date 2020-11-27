@@ -103,7 +103,8 @@ namespace EjercicioClientes.Formularios
                     txtCuotaInteres.Text = cuotainteres.ToString();
                     txtCuotaTotal.Text = cuotatotal.ToString();
 
-
+                    txtPlazo.Enabled = false;
+                    txtMonto.Enabled = false;
                 }
 
 
@@ -164,6 +165,7 @@ namespace EjercicioClientes.Formularios
                         MessageBox.Show("Se dio de alta el prestamo");
 
                         CargarPrestamos();
+                        LimpiarCampos();
 
 
                     }
@@ -174,6 +176,22 @@ namespace EjercicioClientes.Formularios
             {
                 MessageBox.Show(eee.Message);
             }
+        }
+
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            txtMonto.Enabled = true;
+            txtPlazo.Enabled = true;
+            txtPlazo.Clear();
+            txtMonto.Clear();
+            txtCuotaCapital.Clear();
+            txtCuotaInteres.Clear();
+            txtCuotaTotal.Clear();
         }
     }
 }

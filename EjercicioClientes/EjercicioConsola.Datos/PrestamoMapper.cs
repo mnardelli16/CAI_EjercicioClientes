@@ -35,8 +35,8 @@ namespace EjercicioConsola.Datos
         public NameValueCollection ReverseMap(Prestamo P)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("TNA", P.Tna.ToString());
-            n.Add("Linea", P.Linea);
+            n.Add("TNA", P.Tna.ToString().Replace(',', '.'));
+            n.Add("Linea", P.Linea.ToString());
             n.Add("Plazo", P.Plazo.ToString());
             n.Add("idCliente", P.IdCliente.ToString());
             n.Add("Monto", P.Monto.ToString());

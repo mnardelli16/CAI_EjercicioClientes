@@ -10,17 +10,10 @@ namespace EjercicioClientes.Negocio
 {
     public class TipoPrestamosServicio
     {
-        private TipoPrestamoMapper _mapper;
-
-        public TipoPrestamosServicio()
-        {
-            _mapper = new TipoPrestamoMapper();
-        }
-
 
         public List<TipoPrestamos> TrerTipodePrestamos()
         {
-            return _mapper.TraerTiposdePrestamos();
+            return TipoPrestamoMapper.TraerTiposdePrestamos();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace EjercicioClientes.Entidades
 
             foreach(Prestamo P in _lstPrestamos)
             {
-                totalcomis += P.CuotaInteres * 0.15;
+                totalcomis += P.CuotaInteres * P.Plazo * 0.15;
             }
 
             return totalcomis;

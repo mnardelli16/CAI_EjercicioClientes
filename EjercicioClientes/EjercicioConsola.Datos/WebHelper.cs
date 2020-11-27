@@ -47,7 +47,7 @@ namespace EjercicioConsola.Datos
             }
             catch (Exception)
             {
-                return "{ \"isOk\":true,\"id\":5,\"error\":null}";
+                return "{ \"isOk\":false,\"id\":-1,\"error\":null}";
             }
 
 

@@ -69,16 +69,16 @@ namespace EjercicioClientes.Formularios
             {
                 if(cbxCliente.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Debe seleccionar un cliente");
+                    throw new Exception("Debe seleccionar un cliente");
                 }
 
                 else if(cbxTipoTarjeta.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Debe seleccionar un tipo de tarjeta");
+                    throw new Exception("Debe seleccionar un tipo de tarjeta");
                 }
                 else if (cbxPeriodoVencimiento.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Debe seleccionar un vencimiento");
+                    throw new Exception("Debe seleccionar un vencimiento");
                 }
                 else
                 {
@@ -150,7 +150,7 @@ namespace EjercicioClientes.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
